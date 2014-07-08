@@ -1,0 +1,36 @@
+/* Imports */
+@import "compass/css3"
+@import "compass/css3/font-face"
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+@import "compass/css3/text-shadow"
+@import "compass/utilities"
+
+/* Variables */
+$generalWidth: 960px
+$mobilePortrait: 320px
+$mobileLandscape: 640px
+$tabletPortrait: 768px
+
+
+/* Mixins */
+@mixin setWidth($width)
+	@if $width < $generalWidth
+		.widthGeneral
+			width: 100%
+	@else
+		.widthGeneral
+			width: $generalWidth
+			
+/* Borders */
+.borderRadiusTiny
+	@include border-radius(4px)
+
+.borderRadius
+	@include border-radius(5px)
+
+.borderRadiusMid
+	@include border-radius(16px)
+	
+.borderRadiusBig
+	@include border-radius(20px)

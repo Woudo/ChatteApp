@@ -1,4 +1,4 @@
-function FirstCtrl ($scope, $firebase){
+ChatteApp.controller( 'FirstCtrl', [ '$scope', '$firebase', function ($scope, $firebase){
     var ref = new Firebase ('https://chatteapp.firebaseio.com/');
     $scope.messages = $firebase(ref);
     
@@ -7,4 +7,4 @@ function FirstCtrl ($scope, $firebase){
             $scope.messages.$add({from: $scope.name, body: $scope.msg});
             $scope.messages = '';
         };
-    }
+    }]);

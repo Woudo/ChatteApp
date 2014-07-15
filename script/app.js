@@ -1,1 +1,1 @@
-var CHatUp = angular.module('ChatteApp', ["firebase"]);
+var ChatteApp = angular.module('ChatteApp', ["firebase"]);

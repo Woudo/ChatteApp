@@ -3,7 +3,7 @@ ChatteApp.controller( 'FirstCtrl', [ '$scope', '$firebase', function ($scope, $f
     $scope.messages = $firebase(ref);
     
     $scope.addMessage = function(e){
-        if (e.KeyCode != 13) return,
+        if (e.KeyCode != 13) return;
             $scope.messages.$add({from: $scope.name, body: $scope.msg});
             $scope.messages = '';
         };
